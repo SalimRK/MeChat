@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask Chat App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+      <style>
+          body {
+      background-color: black;
+    }
+          h1, h3 {
+  color: white;
+}
+      #chat {
+        height: 300px;
+        overflow-y: scroll;
+        background-color: #212727;
+        color: #fff;
+        font-family: monospace;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      #message {
+        margin-right: 10px;
+        background-color: #212727;
+        color: #fff;
+        font-family: monospace;
+        border: none;
+        outline: none;
+      }
+      #submit-btn {
+        background-color: #212727;
+        color: #fff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .chat-message {
+        padding: 5px;
+        border-bottom: 1px solid #ccc;
+      }
+      .chat-message span {
+        color: #0f0;
+      }
+    </style>
+    <script>
+        var name = prompt("Enter your name:");
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("name").textContent = name;
+      });
+      var socket = io();
+      function sendMessage() {
+        var message = document.getElementById("message").value;
+        socket.emit('message', name + ": " + message);
+        document.getElementById("message").value = "";
+      }
+      socket.on('message', function(data) {
+        var p = document.createElement("p");
+        p.classList.add("chat-message");
+        var span = document.createElement("span");
+        span.textContent = data.split(": ")[0] + ": ";
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(data.split(": ")[1]));
+        document.getElementById("chat").appendChild(p);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="mt-4 mb-4">Flask Chat App</h1>
+            <h3 class="mt-4 mb-4">Welcome Back <span id="name"></span></h3>
+          <div id="chat"></div>
+          <div class="form-inline">
+            <input type="text" id="message" class="form-control mr-2" />
+            <button onclick="sendMessage()" id="submit-btn" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
