@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d17b5ab-86dd-42d8-bcd4-ae5cf1543dff" name="Changes" comment="" />
+    <list default="true" id="8d17b5ab-86dd-42d8-bcd4-ae5cf1543dff" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,6 +105,8 @@
       <workItem from="1677316928654" duration="15526000" />
       <workItem from="1677350960689" duration="262000" />
       <workItem from="1677354161861" duration="5000" />
+      <workItem from="1678288556441" duration="82000" />
+      <workItem from="1678387944483" duration="101000" />
     </task>
     <servers />
   </component>
@@ -110,6 +114,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MeChat$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1677350971056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MeChat$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1678288559171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
